@@ -9,6 +9,16 @@ install_env:
   script: 
   - echo "Установка окружения"
 
+test1:
+  stage: test
+  script: 
+  - echo "Установка окружения"
+
+test2:
+  stage: test
+  script: 
+  - echo "Установка окружения"
+
 run_env:
   stage: build
   script: 
