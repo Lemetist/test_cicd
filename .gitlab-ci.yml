@@ -1,5 +1,29 @@
 stages:
   - tets
   - build
+  - tets2
   - deploy
+
+install_env:
+  stage: test
+  script: 
+  - echo "Установка окружения"
+
+run_env:
+  stage: build
+  script: 
+  - echo "Запуск окружения"
+
+test_code:
+  stage: tets2
+  script: 
+  - echo "install sctip.sh"
+
+deploy_in_server:
+  stage: deploy
+  script:
+  - echo "deploy in server"
+
+
+
 
