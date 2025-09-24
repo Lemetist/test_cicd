@@ -17,7 +17,7 @@ tets_env:
 build_stage:
   stage: build
   script:
-    - ping google.com -c 2
+    - echo "ку"
 
 
 prod_depoyment:
