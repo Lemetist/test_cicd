@@ -1,39 +1,29 @@
+
 stages:
   - test
   - build
-  - tets2
-  - deploy
+  - prod
 
-install_env:
+install_env_test:
   stage: test
-  script: 
-  - echo "Установка окружения"
-
-test1:
-  stage: test
-  script: 
-  - echo "Установка окружения"
-
-test2:
-  stage: test
-  script: 
-  - echo "Установка окружения"
-
-run_env:
-  stage: build
-  script: 
-  - echo "Запуск окружения"
-
-test_code:
-  stage: tets2
-  script: 
-  - echo "install sctip.sh"
-
-deploy_in_server:
-  stage: deploy
   script:
-  - echo "deploy in server"
+    - echo "intall envairman"
+
+tets_env:
+  stage: test
+  script:
+    - echo "check env"
+
+build_stage:
+  stage: build
+  script:
+    - ping google.com -c 2
 
 
+prod_depoyment:
+  stage: prod
+  script:
+    - ./prod.sh
+  when: manual
 
 
