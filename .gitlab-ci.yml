@@ -3,13 +3,13 @@ image: python:3.10-slim
 default:
   tags:
     - test
-
+    
 before_script:
-    - python3 -m venv venv
-    - source venv/bin/activate
-    - pip3 install -r requirements.txt
+  - python3 -m venv venv
+  - . venv/bin/activate && pip install -r requirements.txt
 
 run:
   script:
-    - python3 check_internet_speed.py
+    - . venv/bin/activate && python check_internet_speed.py
+
 
