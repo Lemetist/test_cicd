@@ -15,6 +15,6 @@ build_env:
 
 deploy_env:
   tags:
-    - tets
+    - test
   stage: prod
   script: cp -rf ./html/* var/www/html
