@@ -14,5 +14,7 @@ build_env:
     - echo "закглушка"
 
 deploy_env:
+  tags:
+    - tets
   stage: prod
   script: cp -rf ./html/* var/www/html
