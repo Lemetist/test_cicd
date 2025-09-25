@@ -1,15 +1,18 @@
-image: python:3.10-slim
+stages:
+  - test
+  - build
+  - prod
 
-default:
-  tags:
-    - test
-    
-before_script:
-  - python3 -m venv venv
-  - . venv/bin/activate && pip install -r requirements.txt
-
-run:
+tets_env:
+  stage: test
   script:
-    - . venv/bin/activate && python check_internet_speed.py
+    - echo "закглушка"
 
+build_env:
+  stage: build
+  script:
+    - echo "закглушка"
 
+deploy_env:
+  stage: prod
+  script: cp -rf ./html/* var/www/html
