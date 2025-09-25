@@ -1,31 +1,12 @@
+image: python:3.10-slim
 
-stages:
-  - test
-  - build
-  - prod
+default:
+  tags:
+    - test1
 
-install_env_test:
-  stage: test
+before_script:
+    - pip3 install -r requirements.txt
+
+run:
   script:
-    - echo "intall envairman"
-
-tets_env:
-  stage: test
-  script:
-    - echo "check env"
-
-build_stage:
-  stage: build
-  script:
-    - echo "ку"
-
-
-prod_depoyment:
-  stage: prod
-  script:
-    - ./prod.sh
-    - ./script.sh
-  when: manual
-  
-
-
+    - python3 check_internet_speed.py
