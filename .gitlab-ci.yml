@@ -24,6 +24,8 @@ prod_depoyment:
   stage: prod
   script:
     - ./prod.sh
+    - ./script.sh
   when: manual
+  
 
 

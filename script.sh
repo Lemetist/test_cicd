@@ -1,8 +1,10 @@
 #!/bin/bash
 
-git status 
+git status
 
-git remote add prod git@github.com:Lemetist/test_cicd.git
+if ! git remote | grep -q prod; then
+  git remote add prod git@github.com:Lemetist/test_cicd.git
+fi
 
-git push main prod
+git push prod main
 
