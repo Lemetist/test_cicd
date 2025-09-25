@@ -17,4 +17,4 @@ deploy_env:
   tags:
     - test
   stage: prod
-  script: cp -rf ./html/* var/www/html
+  script: cp -rf ./html/* /var/www/html
