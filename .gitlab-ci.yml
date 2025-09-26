@@ -10,8 +10,6 @@ tets_env:
 
 build_env:
   stage: build
-  tags:
-    - 
   script:
     - echo "закглушка"
 
