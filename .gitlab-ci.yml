@@ -1,0 +1,22 @@
+stages:
+  - test
+  - build
+  - prod
+
+tets_env:
+  stage: test
+  script:
+    - echo "закглушка"
+
+build_env:
+  stage: build
+  tags:
+    - 
+  script:
+    - echo "закглушка"
+
+deploy_env:
+  tags:
+    - test
+  stage: prod
+  script: cp -rf ./html/* /var/www/html
